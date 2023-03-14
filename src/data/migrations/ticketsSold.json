@@ -1,240 +1,280 @@
 [
     {
         "id": "58f1f593-a187-4e77-9b1e-9995107557b2",
+        "buyer_id":"0980f893-64bd-4081-800a-db067809cf35",
         "ticket_id_fk": "ec5ce9d8-63fd-4cde-a7e8-0394503524f2",
         "quantity": 30,
         "purchase_date": "2023-01-10 01:28:15"
     },
     {
         "id": "e0374717-091b-4718-8c71-6a814f40085f",
+        "buyer_id":"7de9386b-4ca5-4165-bf42-d1cdc72346ee",
         "ticket_id_fk": "40570d3b-26c2-4dff-a849-5a4471d18629",
         "quantity": 8,
         "purchase_date": "2023-01-10 01:28:15"
     },
     {
         "id": "45da0ccc-70b6-45b5-b917-7998817a1f2e",
+        "buyer_id":"7f692872-2dfa-40a9-9436-13b30ce9aadb",
         "ticket_id_fk": "a8e14555-443c-4d1f-a0e9-600989366044",
         "quantity": 6,
         "purchase_date": "2023-01-12 01:28:15"
     },
     {
         "id": "48dcefe9-284e-489f-84d6-330b74965f8a",
+        "buyer_id":"083d7f33-fb85-4ec6-8f2e-d788e4581c24",
         "ticket_id_fk": "dc95d70d-f8ed-49b7-a92c-2d3eed3ea83f",
         "quantity": 7,
         "purchase_date": "2023-01-12 01:28:15"
     },
     {
         "id": "4455fb64-90c5-47f3-9890-5cc91f8a3fa5",
+        "buyer_id":"9d54f683-fed7-4876-84f6-498b3e2a29d8",
         "ticket_id_fk": "6c2aecf3-cfdc-40d5-9f6a-dbc4e69783bc",
         "quantity": 10,
         "purchase_date": "2023-01-15 01:28:15"
     },
     {
         "id": "e3ecf697-08b5-4dbb-86d8-70b12cc0f3da",
+        "buyer_id":"ca5e5a9a-e0a0-44f4-88bf-f2d9d40d484d",
         "ticket_id_fk": "b91c4fd9-6b9a-4c5f-b9e0-82ded829cbd9",
         "quantity": 4,
         "purchase_date": "2023-01-15 01:28:15"
     },
     {
         "id": "6f2db312-0edb-4278-9d0a-a923ec895a44",
+        "buyer_id":"9a6818f2-0fbf-4d47-b92b-9be36b3cc630",
         "ticket_id_fk": "3def209e-8344-4224-b601-1146ad81e276",
         "quantity": 6,
         "purchase_date": "2023-01-18 01:28:15"
     },
     {
         "id": "c56fca8b-551e-4677-bb29-10fb6e49f557",
+        "buyer_id":"018d100c-2e8b-48e1-8096-3ee450732214",
         "ticket_id_fk": "3a8ff710-1078-4070-856b-2889bcf93989",
         "quantity": 20,
         "purchase_date": "2023-01-19 01:28:15"
     },
     {
         "id": "715cbeb0-d018-4d88-bb0b-32f70c5422ae",
+        "buyer_id":"710097e3-351e-455a-b603-841c1db785a6",
         "ticket_id_fk": "f23a49b7-ff9b-4290-8385-4fc6af91123b",
         "quantity": 12,
         "purchase_date": "2023-01-20 01:28:15"
     },
     {
         "id": "a4b724aa-067c-4940-bb0d-5586670fb3bd",
+        "buyer_id":"4c972a64-7c59-49e4-b8e7-5b643c863e2a",
         "ticket_id_fk": "bc5165f6-f4f5-482d-8f1e-0cda00b3adc9",
         "quantity": 5,
         "purchase_date": "2023-01-21 01:28:15"
     },
     {
         "id": "4cda38b2-f310-4fc4-8f77-6b4a448bf13c",
+        "buyer_id":"cf66bc1e-4d1f-45a1-b451-d5420c7c2e97",
         "ticket_id_fk": "2f23d55d-92b9-4b14-95db-ef2612660642",
         "quantity": 8,
         "purchase_date": "2023-01-22 01:28:15"
     },
     {
         "id": "c028599a-5a5a-4752-a2cf-4fd2688d1c1e",
+        "buyer_id":"84ffa88b-a81e-44f8-83b5-a4e7a242ea2d",
         "ticket_id_fk": "8bbb5a2a-1873-4c2c-b5d9-d74cab1f9837",
         "quantity": 5,
         "purchase_date": "2023-01-23 01:28:15"
     },
     {
         "id": "2fddde7e-8c3d-49ec-930d-793036714177",
+        "buyer_id":"1bcde4a4-6f04-46be-bde7-e47b1ce7fd8c",
         "ticket_id_fk": "a0c4adb1-b559-42d6-8090-12850a05a926",
         "quantity": 6,
         "purchase_date": "2023-01-24 01:28:15"
     },
     {
         "id": "e6abb00c-d817-4d6f-92ba-0c922d69fe22",
+        "buyer_id":"0955d8a1-17eb-4825-bcfb-a527c5b812e3",
         "ticket_id_fk": "19f5ce48-dcdf-41bc-9639-3f978268d59e",
         "quantity": 5,
         "purchase_date": "2023-01-25 01:28:15"
     },
     {
         "id": "ee4252e4-f649-4b80-89db-6086829c54b6",
+        "buyer_id":"ca5e5a9a-e0a0-44f4-88bf-f2d9d40d484d",
         "ticket_id_fk": "3def209e-8344-4224-b601-1146ad81e276",
         "quantity": 20,
         "purchase_date": "2023-01-26 01:28:15"
     },
     {
         "id": "8cdd741f-5e11-4c5b-954e-896a6b09381e",
+        "buyer_id":"577e8beb-aa1e-43d1-9bc5-71df76d8ed23",
         "ticket_id_fk": "b91c4fd9-6b9a-4c5f-b9e0-82ded829cbd9",
         "quantity": 6,
         "purchase_date": "2023-01-27 01:28:15"
     },
     {
         "id": "5f448001-0b50-48af-8e0a-209028ddc5d9",
+        "buyer_id":"427b449a-49c9-4ce0-9c4d-efe75d9db84c",
         "ticket_id_fk": "6c2aecf3-cfdc-40d5-9f6a-dbc4e69783bc",
         "quantity": 5,
         "purchase_date": "2023-02-02 10:04:28"
     },
     {
         "id": "61685689-3893-4e30-be3c-51e11b87c2d9",
+        "buyer_id":"7de9386b-4ca5-4165-bf42-d1cdc72346ee",
         "ticket_id_fk": "bc5165f6-f4f5-482d-8f1e-0cda00b3adc9",
         "quantity": 20,
         "purchase_date": "2023-02-04 10:04:28"
     },
     {
         "id": "eb5543d2-e183-470a-9e11-7bc81595ded6",
+        "buyer_id":"eb50fd48-04d6-48e7-82c5-01fa0a7ef5b2",
         "ticket_id_fk": "f23a49b7-ff9b-4290-8385-4fc6af91123b",
         "quantity": 8,
         "purchase_date": "2023-02-06 10:04:28"
     },
     {
         "id": "b9c1fb8f-2df2-464f-9846-e3b3363a6773",
+        "buyer_id":"1734c014-397f-445c-863c-887c7178dd72",
         "ticket_id_fk": "f95f0031-4aef-475f-bf21-72637b021444",
         "quantity": 14,
         "purchase_date": "2023-02-07 10:04:28"
     },
     {
         "id": "73f8566e-b6c0-4df5-89fd-f5478aaa3be8",
+        "buyer_id":"610c68f8-71cf-421c-8695-9c33038b973d",
         "ticket_id_fk": "2f23d55d-92b9-4b14-95db-ef2612660642",
         "quantity": 8,
         "purchase_date": "2023-02-08 10:04:28"
     },
     {
         "id": "0444ffc3-5952-4a65-b662-f8c7443ad7a3",
+        "buyer_id":"9d54f683-fed7-4876-84f6-498b3e2a29d8",
         "ticket_id_fk": "b29dd0a2-759f-44a6-a7f5-bbbfc97a833c",
         "quantity": 120,
         "purchase_date": "2023-02-09 10:04:28"
     },
     {
         "id": "9d6e6d37-eb1c-419e-ae25-164f13a44a33",
+        "buyer_id":"577e8beb-aa1e-43d1-9bc5-71df76d8ed23",
         "ticket_id_fk": "8bbb5a2a-1873-4c2c-b5d9-d74cab1f9837",
         "quantity": 10,
         "purchase_date": "2023-02-10 10:04:28"
     },
     {
         "id": "f9f01151-d097-436d-95e4-5117f4cc4036",
+        "buyer_id":"083d7f33-fb85-4ec6-8f2e-d788e4581c24",
         "ticket_id_fk": "3a8ff710-1078-4070-856b-2889bcf93989",
         "quantity": 2,
         "purchase_date": "2023-02-11 10:04:28"
     },
     {
         "id": "40aae9a2-7a2e-42c0-84a1-99d1e03bb76d",
+        "buyer_id":"4c972a64-7c59-49e4-b8e7-5b643c863e2a",
         "ticket_id_fk": "810d6e6f-4b67-4480-a172-1b0fb1dc0426",
         "quantity": 20,
         "purchase_date": "2023-02-12 10:04:28"
     },
     {
         "id": "29657410-b0fc-481b-b8f5-f789650dd9a5",
+        "buyer_id":"1734c014-397f-445c-863c-887c7178dd72",
         "ticket_id_fk": "068fd918-9ba9-4e24-804b-63f5f8c0d1ed",
         "quantity": 6,
         "purchase_date": "2023-02-13 10:04:28"
     },
     {
         "id": "88dafbb5-99f3-40e7-abaa-d24e0c46ac76",
+        "buyer_id":"e1a95685-c0a6-4000-b81a-6a8506856594",
         "ticket_id_fk": "daa12895-b257-4267-9015-f95eb59933cb",
         "quantity": 9,
         "purchase_date": "2023-02-14 10:04:28"
     },
     {
         "id": "d013d445-f473-43ca-b1f1-d141395dc97a",
+        "buyer_id":"eb50fd48-04d6-48e7-82c5-01fa0a7ef5b2",
         "ticket_id_fk": "b6c9514b-8354-45e6-b8eb-8c0739471fba",
         "quantity": 15,
         "purchase_date": "2023-02-15 10:04:28"
     },
     {
         "id": "653124ce-4c8e-4792-ae25-e3bebe0c4575",
+        "buyer_id":"427b449a-49c9-4ce0-9c4d-efe75d9db84c",
         "ticket_id_fk": "f95f0031-4aef-475f-bf21-72637b021444",
         "quantity": 16,
         "purchase_date": "2023-02-16 10:04:28"
     },
     {
         "id": "829f7574-4d63-4cb1-a22b-deced4abefc2",
+        "buyer_id":"610c68f8-71cf-421c-8695-9c33038b973d",
         "ticket_id_fk": "a0c4adb1-b559-42d6-8090-12850a05a926",
         "quantity": 5,
         "purchase_date": "2023-02-17 10:04:28"
     },
     {
         "id": "0eb11c51-b321-4a63-b2c4-eda57dd9d2a3",
+        "buyer_id":"018d100c-2e8b-48e1-8096-3ee450732214",
         "ticket_id_fk": "ec5ce9d8-63fd-4cde-a7e8-0394503524f2",
         "quantity": 1,
         "purchase_date": "2023-02-18 10:04:28"
     },
     {
         "id": "722624b8-1be0-4818-85e1-9ffebe186b17",
+        "buyer_id":"cf66bc1e-4d1f-45a1-b451-d5420c7c2e97",
         "ticket_id_fk": "19f5ce48-dcdf-41bc-9639-3f978268d59e",
         "quantity": 15,
         "purchase_date": "2023-02-19 10:04:28"
     },
     {
         "id": "b04df765-9f6c-43f7-b846-30a112508265",
+        "buyer_id":"0980f893-64bd-4081-800a-db067809cf35",
         "ticket_id_fk": "dc95d70d-f8ed-49b7-a92c-2d3eed3ea83f",
         "quantity": 14,
         "purchase_date": "2023-02-20 10:04:28"
     },
     {
         "id": "32de8033-18fa-4b3d-89d4-1a94daee5435",
+        "buyer_id":"9a6818f2-0fbf-4d47-b92b-9be36b3cc630",
         "ticket_id_fk": "810d6e6f-4b67-4480-a172-1b0fb1dc0426",
         "quantity": 15,
         "purchase_date": "2023-02-21 10:04:28"
     },
     {
         "id": "65828fc7-b62d-4fd7-a70f-9e88b5574c6e",
+        "buyer_id":"0955d8a1-17eb-4825-bcfb-a527c5b812e3",
         "ticket_id_fk": "b29dd0a2-759f-44a6-a7f5-bbbfc97a833c",
         "quantity": 50,
         "purchase_date": "2023-02-22 10:04:28"
     },
     {
         "id": "6716c56f-dd92-4785-a8c2-38ac599428d8",
+        "buyer_id":"710097e3-351e-455a-b603-841c1db785a6",
         "ticket_id_fk": "40570d3b-26c2-4dff-a849-5a4471d18629",
         "quantity": 30,
         "purchase_date": "2023-02-23 10:04:28"
     },
     {
         "id": "8527fd50-68c9-46c5-800c-810a9c54e725",
+        "buyer_id":"e1a95685-c0a6-4000-b81a-6a8506856594",
         "ticket_id_fk": "daa12895-b257-4267-9015-f95eb59933cb",
         "quantity": 15,
         "purchase_date": "2023-02-24 10:04:28"
     },
     {
         "id": "8aa6e611-54e6-41a7-9321-f9efc252a869",
+        "buyer_id":"84ffa88b-a81e-44f8-83b5-a4e7a242ea2d",
         "ticket_id_fk": "a8e14555-443c-4d1f-a0e9-600989366044",
         "quantity": 13,
         "purchase_date": "2023-02-25 10:04:28"
     },
     {
         "id": "ba5f30ae-cdfc-499a-a937-f78b3acfd7d2",
+        "buyer_id":"1bcde4a4-6f04-46be-bde7-e47b1ce7fd8c",
         "ticket_id_fk": "068fd918-9ba9-4e24-804b-63f5f8c0d1ed",
         "quantity": 20,
         "purchase_date": "2023-02-26 10:04:28"
     },
     {
         "id": "92501019-6297-4cd3-8ae0-1adcd36ac416",
+        "buyer_id":"7f692872-2dfa-40a9-9436-13b30ce9aadb",
         "ticket_id_fk": "b6c9514b-8354-45e6-b8eb-8c0739471fba",
         "quantity": 15,
         "purchase_date": "2023-02-27 10:04:28"
