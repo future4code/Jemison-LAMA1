@@ -1,0 +1,122 @@
+[
+    {
+        "id": "8b0e242a-572a-4ff5-bebc-5ef017fe5cd0",
+        "name": "Caveira grega",
+        "music_genre": "Rock",
+        "responsible": "Ivanilson Carmo"
+    },
+    {
+        "id": "de2447a5-623f-4135-9030-36ce9fbab96a",
+        "name": "Amores do forró",
+        "music_genre": "Forró",
+        "responsible": "Pedro Saulo"
+    },
+    {
+        "id": "bdb28dde-a132-46c8-a926-36876e3cdfa7",
+        "name": "Festasamba",
+        "music_genre": "Pagode",
+        "responsible": "Belo"
+    },
+    {
+        "id": "9dd9e71f-97ec-46ad-9bed-42a73f2c6ab7",
+        "name": "Wild Cats",
+        "music_genre": "POP",
+        "responsible": "Reinaldo Antunes"
+    },
+    {
+        "id": "fc6fc712-cd2a-49ba-b36a-2f62750fb044",
+        "name": "Sorriso e Sincero",
+        "music_genre": "Sertanejo",
+        "responsible": "Senhor Sorriso"
+    },
+    {
+        "id": "139e3587-b10d-4ac5-a69f-8a201e4357e6",
+        "name": "To Conquer",
+        "music_genre": "Rock",
+        "responsible": "Ana Paula Machado"
+    },
+    {
+        "id": "90dc8355-7019-4d53-ac45-c939b177c5c0",
+        "name": "Marquinha de biquíni",
+        "music_genre": "Forró",
+        "responsible": "Joana Silveira"
+    },
+    {
+        "id": "8a714b17-a0b5-4d72-8aae-1ab0f23eb7a8",
+        "name": "Os levados",
+        "music_genre": "Pagode",
+        "responsible": "Dalton Silva"
+    },
+    {
+        "id": "76a7b088-5225-469a-9ab6-998447b4ebbf",
+        "name": "Children of the Sun",
+        "music_genre": "POP",
+        "responsible": "Regina Amaral"
+    },
+    {
+        "id": "9ee6b778-6165-4772-a06a-f7ae358b144d",
+        "name": "Perito e Paquera",
+        "music_genre": "Sertanejo",
+        "responsible": "Paquera Jr."
+    },
+    {
+        "id": "b40e6ae6-f4de-4ee4-9573-a702a50222fb",
+        "name": "Grito no escuro",
+        "music_genre": "Rock",
+        "responsible": "Gleidson Rocha"
+    },
+    {
+        "id": "383f5400-3a1c-4e15-8ab5-1cb99851b041",
+        "name": "Lima doce",
+        "music_genre": "Forró",
+        "responsible": "Silvana Costa"
+    },
+    {
+        "id": "26d7e394-070d-45bd-a330-1db2886cab57",
+        "name": "Amores Revelados",
+        "music_genre": "Pagode",
+        "responsible": "Leandro Nascimento"
+    },
+    {
+        "id": "72602cb4-0f8e-405b-9660-c61747cedbcf",
+        "name": "Oceans of Slumber",
+        "music_genre": "POP",
+        "responsible": "Karine Pereira"
+    },
+    {
+        "id": "063672eb-275b-4ff3-bb5f-216feb385df6",
+        "name": "Patrão e Funcionário",
+        "music_genre": "Sertanejo",
+        "responsible": "Gilson Souza"
+    },
+    {
+        "id": "0c4d4c81-b710-4183-be7c-075837c2156e",
+        "name": "Strong girls",
+        "music_genre": "Rock",
+        "responsible": "Cibele da Cunha"
+    },
+    {
+        "id": "f8b7f5f3-a1b2-4960-9718-c332a608e272",
+        "name": "Forrozando",
+        "music_genre": "Forró",
+        "responsible": "Renato Arantes"
+    },
+    {
+        "id": "8aa47541-35d7-47a0-aee7-24e500f3acc1",
+        "name": "Affaire do Flerte",
+        "music_genre": "Pagode",
+        "responsible": "Jessica Lima"
+    },
+    {
+        "id": "2a2aaad7-d309-40f0-8c40-b306686e7201",
+        "name": "Stone Broken",
+        "music_genre": "POP",
+        "responsible": "Tadeu Machado"
+    },
+    {
+        "id": "5c8898d2-ef1e-435f-ba8f-09654d7ba812",
+        "name": "Praião e Piranha",
+        "music_genre": "Sertanejo",
+        "responsible": "Regina Regini"
+    }
+]
