@@ -1,4 +1,4 @@
-import { RoleEnum } from "../../roleENUM";
+import { RoleEnum } from "../userClass";
 import { UserClass } from "../userClass";
 
 export class UserControllerInputDTO {

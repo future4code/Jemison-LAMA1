@@ -3,7 +3,7 @@ import { UserRepository } from './repository/userRepository';
 import { CustomError } from "../error/customError"
 import * as dto from "../model/class/DTO/UserDTOs"
 import * as err from '../error/userCustomError'
-import { RoleEnum } from "../model/roleENUM"
+import { RoleEnum } from './../model/class/userClass';
 import { AuthenticationDataDTO } from '../model/class/DTO/authenticatonsDTO';
 import { IAuthenticator, IHashGenerator, IIdGenerator } from './ports';
 
