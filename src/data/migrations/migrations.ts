@@ -54,9 +54,11 @@ export abstract class MigrationDataBase extends BaseDatabase {
 
               CREATE TABLE IF NOT EXISTS ${TABLE_TICKET_SALES}(
               id VARCHAR(255) PRIMARY KEY,
+              buyer_id VARCHAR(255) NOT NULL,
               ticket_id_fk VARCHAR(255) NOT NULL,
               quantity INT NOT NULL,
               purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+              FOREIGN KEY(buyer_id) REFERENCES ${TABLE_USERS}(id),
               FOREIGN KEY(ticket_id_fk) REFERENCES ${TABLE_TICKETS}(id)
               );
 
