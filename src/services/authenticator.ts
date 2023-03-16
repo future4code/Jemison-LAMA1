@@ -1,8 +1,9 @@
 import { AuthenticationDataDTO, AuthenticationTokenDTO } from '../model/class/DTO/authenticatonsDTO';
 import { Unauthorized } from '../error/customError';
 import * as jwt from 'jsonwebtoken'
+import { IAuthenticator } from '../business/ports';
 
-export class Authenticator {
+export class Authenticator implements IAuthenticator{
 
     public generateToken = (input: AuthenticationDataDTO): string => {
 

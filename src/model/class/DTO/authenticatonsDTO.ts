@@ -1,4 +1,4 @@
-import { RoleEnum } from "../userClass"
+import { RoleEnum } from "../../roleENUM"
 
 export class AuthenticationDataDTO {
     constructor (

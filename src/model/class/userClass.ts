@@ -1,4 +1,3 @@
-
 export enum RoleEnum{
     NORMAL = 'normal',
     ADMIN = 'admin'
@@ -47,4 +46,5 @@ export class UserClass {
         this.role = newRole
     }
 }
- 
+
+
