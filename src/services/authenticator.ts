@@ -1,11 +1,14 @@
-import { AuthenticationDataDTO, AuthenticationTokenDTO } from '../model/class/DTO/authenticatonsDTO';
+import { RoleEnum } from './../model/class/userClass';
+import { IAuthenticator } from './../business/repository/iauthenticator';
+import { AuthenticationDataDTO, AuthenticationTokenDTO, PayloadDataDTO } from '../model/class/DTO/authenticatonsDTO';
 import { Unauthorized } from '../error/customError';
 import * as jwt from 'jsonwebtoken'
 import { IAuthenticator } from '../business/ports';
 
+
 export class Authenticator implements IAuthenticator{
 
-    public generateToken = (input: AuthenticationDataDTO): string => {
+public generateToken = (input: AuthenticationDataDTO): string => {
 
         const token = jwt.sign(
             {id: input.getId(), role: input.getRole() },
@@ -15,9 +18,9 @@ export class Authenticator implements IAuthenticator{
         return token
     }
 
-    getTokenData = (token: AuthenticationTokenDTO) => {
+    getTokenData = (token: AuthenticationTokenDTO):PayloadDataDTO => {
         try {
-            const payload = jwt.verify(token.getToken(), process.env.JWT_KEY as string)as {id:string, role:string}
+            const payload = jwt.verify(token.getToken(), process.env.JWT_KEY as string) as {id:string, role:RoleEnum}
             return payload
         } catch (error: any) {
             console.log(error.message)
