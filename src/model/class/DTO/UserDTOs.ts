@@ -40,3 +40,12 @@ export class CreationUserReturnDTO {
         return this.token
     }
 }
+
+export class GetUserProfileInputDTO {
+    constructor (
+        private userId: string,
+    ) {}
+    public getUserId() {
+        return this.userId
+    }
+}
