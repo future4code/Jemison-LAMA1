@@ -1,4 +1,4 @@
-import { RoleEnum } from "../../roleENUM";
+import { RoleEnum } from "../userClass";
 import { UserClass } from "../userClass";
 
 export class UserControllerInputDTO {
@@ -38,5 +38,14 @@ export class CreationUserReturnDTO {
     }
     public getToken() {
         return this.token
+    }
+}
+
+export class GetUserProfileInputDTO {
+    constructor (
+        private userId: string,
+    ) {}
+    public getUserId() {
+        return this.userId
     }
 }

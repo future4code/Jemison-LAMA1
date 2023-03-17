@@ -29,3 +29,15 @@ export class EmailAlreadyExists extends CustomError {
         super(409, "Email já existe no banco de dados")
     }
 }
+
+export class UserIdEqualYourOwnID extends CustomError {
+    constructor() {
+        super(422, "Id do usuário informado, igual ao Id do usuário autenticado pelo token")
+    }
+}
+
+export class InvalidUser extends CustomError {
+    constructor() {
+        super(404, "Id do usuário não encontrado no banco de dados.")
+    }
+}
