@@ -22,3 +22,10 @@ export class AuthenticationTokenDTO {
         return this.token
     }
 }
+
+export class PayloadDataDTO {
+    constructor (
+        public id:string,
+        public role:RoleEnum
+        ){}
+}
