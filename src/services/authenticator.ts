@@ -3,10 +3,12 @@ import { IAuthenticator } from './../business/repository/iauthenticator';
 import { AuthenticationDataDTO, AuthenticationTokenDTO, PayloadDataDTO } from '../model/class/DTO/authenticatonsDTO';
 import { Unauthorized } from '../error/customError';
 import * as jwt from 'jsonwebtoken'
+import { IAuthenticator } from '../business/ports';
 
-export class Authenticator implements IAuthenticator {
 
-    public generateToken = (input: AuthenticationDataDTO): string => {
+export class Authenticator implements IAuthenticator{
+
+public generateToken = (input: AuthenticationDataDTO): string => {
 
         const token = jwt.sign(
             {id: input.getId(), role: input.getRole() },

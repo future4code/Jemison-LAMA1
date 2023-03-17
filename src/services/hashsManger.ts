@@ -1,6 +1,7 @@
 import * as bcrypt from 'bcryptjs'
+import { IHashGenerator } from '../business/ports'
 
-export class HashManager {
+export class HashManager implements IHashGenerator{
 
     generateHash = async (plainText: string): Promise<string> => {
 
@@ -11,8 +12,8 @@ export class HashManager {
 
     }
 
-    compareHash = async (plainTest: string, hashText: string): Promise<boolean> => {
-        const result = await bcrypt.compare(plainTest, hashText)
+    compareHash = async (plainText: string, hashText: string): Promise<boolean> => {
+        const result = await bcrypt.compare(plainText, hashText)
         return result
     }
 }

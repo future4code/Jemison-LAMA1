@@ -17,4 +17,9 @@ export abstract class BaseDatabase {
     });
 
     abstract TABLE_NAME: string;
+
+    public async CreateItem(item: any) {
+        await BaseDatabase.connection(this.TABLE_NAME).insert(item);
+
+    };
 }
