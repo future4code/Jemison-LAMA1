@@ -4,14 +4,14 @@ import { UserClass } from "../model/class/userClass"
 import { BaseDatabase } from "./baseDatabase"
 import { TABLE_BANDS, TABLE_USERS } from "./tableNames"
 
-export class UserDatabase extends BaseDatabase implements UserRepository{
+export class UserDatabase extends BaseDatabase implements UserRepository {
 
     TABLE_NAME = TABLE_USERS
-    TABLE_BANDS = TABLE_BANDS
+
 
     public insertUser = async (user: UserClass): Promise<void> => {
-        try{
-            await super.CreateItem(user)
+        try {
+            await UserDatabase.connection(this.TABLE_NAME).insert(user)
         } catch (error: any) {
             throw new CustomError(400, error.message)
         }
@@ -27,18 +27,4 @@ export class UserDatabase extends BaseDatabase implements UserRepository{
         }
     };
 
-    public getUserById = async (id: string): Promise<any> => {
-        try{
-            const result = await UserDatabase.connection.raw(`
-                SELECT id AS "Id de Usuário", name AS "Nome", music_genre AS "Gênero Musical",
-                responsible AS "Responsável pela banda"
-                FROM ${this.TABLE_BANDS}
-                WHERE id = "${id}" 
-            `)
-            return result [0]
-
-        } catch (error: any) {
-            throw new CustomError(400, error.message)
-        }
-    }
 }

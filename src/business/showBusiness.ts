@@ -1,7 +1,5 @@
-import { IdGenerator } from './../services/idGenerator';
-import { IShowHoursValidator } from './repository/ishowHoursValidator';
+import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './ports';
 import { WeekDayEnum, ShowClass } from './../model/showClass';
-import { IAuthenticator } from './repository/iauthenticator';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
 import { ShowRepository } from './repository/showRepository';
 import { CustomError } from '../error/customError';
@@ -19,20 +17,20 @@ export class ShowBusiness {
         private authenticator: IAuthenticator,
         private bandDatabase: BandRepository,
         private idGenerator: IIdGenerator,
-       private showDateValidator: IShowHoursValidator
+        private showHourValidator: IShowHoursValidator
     ) { }
 
-    public createShow = async (input: dto.ShowCreateInputDTO, token: AuthenticationTokenDTO): Promise<void> => {
+    public createShow = async (input: dto.ShowCreateInputDTO, token: AuthenticationTokenDTO): Promise<dto.ReturnCreateShowDTO> => {
 
         try {
-            const {role } = this.authenticator.getTokenData(token)
+            const { role } = this.authenticator.getTokenData(token)
 
-            if(role !== RoleEnum.ADMIN){
-                throw new
+            if (role !== RoleEnum.ADMIN) {
+                throw new err.ProhibitedActionForThisRoleAccount()
             }
-       
+
             let filtredWeekDay
-       
+
 
             if (!input.getWeekday()) {
                 throw new err.MissingWeekDay()
@@ -46,25 +44,25 @@ export class ShowBusiness {
 
             const bandExists = await this.bandDatabase.getBandById(input.getBandId())
 
-            if(!bandExists){
+            if (!bandExists) {
                 throw new err.BandIdNonExists()
             }
 
-            if(input.getWeekday().toLowerCase() === WeekDayEnum.SEXTA.toString()){
+            if (input.getWeekday().toLowerCase() === WeekDayEnum.SEXTA.toString()) {
                 filtredWeekDay = WeekDayEnum.SEXTA
-            }else if(input.getWeekday().toLowerCase() === WeekDayEnum.SABADO.toString() || input.getWeekday().toLowerCase() === 'sábado'){
+            } else if (input.getWeekday().toLowerCase() === WeekDayEnum.SABADO.toString() || input.getWeekday().toLowerCase() === 'sábado') {
                 filtredWeekDay = WeekDayEnum.SABADO
-            }else if(input.getWeekday().toLowerCase() === WeekDayEnum.DOMINGO.toString()){
+            } else if (input.getWeekday().toLowerCase() === WeekDayEnum.DOMINGO.toString()) {
                 filtredWeekDay = WeekDayEnum.DOMINGO
-            }else{
+            } else {
                 throw new err.InvalidWeekDay()
             }
 
-            const isHoursValid = await this.showDateValidator.validate( filtredWeekDay ,input.getStartTime(), input.getEndTime())
+            const isHoursValid = await this.showHourValidator.validate(filtredWeekDay, input.getStartTime(), input.getEndTime())
 
-            if(isHoursValid){
+            if (isHoursValid) {
 
-               const id = this.idGenerator.generateId()
+                const id = this.idGenerator.generateId()
 
                 const newShow = new ShowClass(
                     id,
@@ -76,11 +74,44 @@ export class ShowBusiness {
 
                 await this.showDatabase.insertShow(newShow)
 
-                return CRIAR UMA DTO DE SAIDA
+                const result = new dto.ReturnCreateShowDTO('Show criado com sucesso.')
+
+                return result
             }
 
         } catch (error: any) {
             throw new CustomError(error.statusCode, error.message)
         }
     };
+
+    public getShowByWeekDay = async (input: dto.showGetByWeekDayDTO, inputToken: AuthenticationTokenDTO): Promise<dto.ReturnGetShowByWeekDTO[] | undefined> => {
+        try {
+            this.authenticator.getTokenData(inputToken)
+
+            if (!input.getWeekDay()) {
+                throw new err.MissingWeekDay()
+            }
+
+            let filtredWeekDay
+
+            if (input.getWeekDay().toLowerCase() === WeekDayEnum.SEXTA.toString()) {
+                filtredWeekDay = WeekDayEnum.SEXTA
+            } else if (input.getWeekDay().toLowerCase() === WeekDayEnum.SABADO.toString() || input.getWeekDay().toLowerCase() === 'sábado') {
+                filtredWeekDay = WeekDayEnum.SABADO
+            } else if (input.getWeekDay().toLowerCase() === WeekDayEnum.DOMINGO.toString()) {
+                filtredWeekDay = WeekDayEnum.DOMINGO
+            } else {
+                throw new err.InvalidWeekDay()
+            }
+
+            const result = await this.showDatabase.getShowByWeekDay(filtredWeekDay)
+            return result
+
+        } catch (error: any) {
+            throw new CustomError(error.statusCode, error.message)
+        }
+
+    };
+
+    
 }
