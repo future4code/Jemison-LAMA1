@@ -1,4 +1,4 @@
-import { WeekDayEnum } from './../../showClass';
+import { WeekDayEnum } from '../showClass';
 
 export class ShowCreateInputDTO {
     constructor(
@@ -32,7 +32,7 @@ export class showGetByWeekDayDTO {
     }
 }
 
-export class ReturnGetShowByWeekDTO {
+export class ReturnGetShowByDTO {
     constructor(
         public showId: string,
         public weekDay: string,

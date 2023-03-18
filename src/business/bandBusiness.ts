@@ -9,7 +9,7 @@ import * as dto from '../model/class/DTO/bandDTOs'
 import { ShowRepository } from './repository/showRepository';
 import { ReturnShowByBandDTO } from '../model/class/DTO/showDTOs';
 
-export default class BandBusiness {
+export class BandBusiness {
     constructor(
         private bandDatabase: BandRepository,
         private showDatabase: ShowRepository,
@@ -38,7 +38,7 @@ export default class BandBusiness {
 
             const bandNameExists = await this.bandDatabase.getBandByName(input.getName())
 
-            if (bandNameExists) {
+            if (bandNameExists !== undefined) {
                 throw new err.BandNameAlreadyExists()
             } else {
 

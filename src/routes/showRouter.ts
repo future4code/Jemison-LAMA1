@@ -19,6 +19,6 @@ const showBusiness = new ShowBusiness(showDatabase, authenticator, bandDatabase,
 
 const showController = new ShowController(showBusiness)
 
-showRouter.get('/byWeekDay', (req, res) => showController.getShowsByDayWeek)
+showRouter.get('/byWeekDay', (req, res) => showController.getShowsByDayWeek(req, res))
 
-showRouter.post('/create', (req, res) => showController.createShow)
+showRouter.post('/create', (req, res) => showController.createShow(req, res))

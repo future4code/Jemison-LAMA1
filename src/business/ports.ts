@@ -1,5 +1,5 @@
 import { AuthenticationDataDTO, AuthenticationTokenDTO, PayloadDataDTO } from "../model/class/DTO/authenticatonsDTO"
-import { WeekDayEnum } from "../model/showClass"
+import { WeekDayEnum } from "../model/class/showClass"
 
 export interface IHashGenerator {
     generateHash(plainText: string): Promise<string>
@@ -19,3 +19,4 @@ export interface IAuthenticator {
 export interface IShowHoursValidator{
     validate(weekDay: WeekDayEnum, startTime: number, endTime: number):Promise<boolean>
  }
+

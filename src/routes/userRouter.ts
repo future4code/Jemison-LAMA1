@@ -14,5 +14,3 @@ const userBusiness = new UserBusiness(userDatabase, new IdGenerator(), new HashM
 const userController = new UserController(userBusiness)
 
 userRouter.post('/create', (req, res) => userController.creatUsers(req, res))
-
-userRouter.get('/profile/:userId', (req, res) => userController.getUserProfile(req, res))

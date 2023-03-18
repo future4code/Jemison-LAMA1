@@ -1,5 +1,5 @@
 import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './ports';
-import { WeekDayEnum, ShowClass } from './../model/showClass';
+import { WeekDayEnum, ShowClass } from '../model/class/showClass';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
 import { ShowRepository } from './repository/showRepository';
 import { CustomError } from '../error/customError';
@@ -44,7 +44,7 @@ export class ShowBusiness {
 
             const bandExists = await this.bandDatabase.getBandById(input.getBandId())
 
-            if (!bandExists) {
+            if (bandExists === undefined) {
                 throw new err.BandIdNonExists()
             }
 
@@ -84,7 +84,7 @@ export class ShowBusiness {
         }
     };
 
-    public getShowByWeekDay = async (input: dto.showGetByWeekDayDTO, inputToken: AuthenticationTokenDTO): Promise<dto.ReturnGetShowByWeekDTO[] | undefined> => {
+    public getShowByWeekDay = async (input: dto.showGetByWeekDayDTO, inputToken: AuthenticationTokenDTO): Promise<dto.ReturnGetShowByDTO[] | undefined> => {
         try {
             this.authenticator.getTokenData(inputToken)
 
