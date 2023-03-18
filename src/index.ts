@@ -1,10 +1,14 @@
 import { showRouter } from './routes/showRouter';
 import { userRouter } from './routes/userRouter';
-import {app} from './app';
 import { bandRouter } from './routes/band.Router';
+import { loginRouter } from './routes/loginRouter';
+import {app} from './app';
 
+
+app.use('/', loginRouter);
 
 app.use('/user', userRouter);
+
 app.use("/band", bandRouter);
 
-app.use('/show', showRouter)
+app.use('/show', showRouter);

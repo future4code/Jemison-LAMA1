@@ -1,4 +1,4 @@
-import { ShowController} from './../controller/showController';
+import { ShowController } from './../controller/showController';
 import { BandDatabase } from './../data/bandDatabase';
 import { ShowBusiness } from './../business/showBusiness';
 import { ShowDatabase } from './../data/showDatabase';
@@ -19,6 +19,6 @@ const showBusiness = new ShowBusiness(showDatabase, authenticator, bandDatabase,
 
 const showController = new ShowController(showBusiness)
 
-showRouter.get('byWeek',showController.getShowsByDayWeek)
+showRouter.get('/byWeekDay', (req, res) => showController.getShowsByDayWeek)
 
-showRouter.post('/create', showController.createShow)
+showRouter.post('/create', (req, res) => showController.createShow)
