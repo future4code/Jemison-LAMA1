@@ -3,11 +3,10 @@ import { UserRepository } from './repository/userRepository';
 import { CustomError } from "../error/customError"
 import * as dto from "../model/class/DTO/UserDTOs"
 import * as err from '../error/userCustomError'
-
 import { RoleEnum } from './../model/class/userClass';
-import { AuthenticationDataDTO } from '../model/class/DTO/authenticatonsDTO';
-
+import { AuthenticationDataDTO, AuthenticationTokenDTO} from '../model/class/DTO/authenticatonsDTO';
 import { IAuthenticator, IHashGenerator, IIdGenerator } from './ports';
+
 
 export class UserBusiness {
 
@@ -76,26 +75,7 @@ export class UserBusiness {
         } catch (error: any) {
             throw new CustomError(400, error.message)
         }
-    }
-    public getUserProfile = async (userId: dto.GetUserProfileInputDTO, input: AuthenticationTokenDTO): Promise<dto.CreationUserReturnDTO> => {
-        try {
-            const {id} = this.authenticator.getTokenData(input)
+    };
 
-            if(userId.getUserId() === id) {
-                throw new err.UserIdEqualYourOwnID
-            }
-
-            const result = await this.userDatabase.getUserById(userId.getUserId())
-
-            if (result.lenth === 0) {
-                throw new err.InvalidUser
-            } else {
-                return result
-            }
-
-        } catch (error: any) {
-            throw new CustomError(400, error.message)
-        }
-    }
-
+    
 }

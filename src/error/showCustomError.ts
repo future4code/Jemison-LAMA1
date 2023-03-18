@@ -39,3 +39,10 @@ export class AlreadyOccupied extends CustomError{
         super(404, 'Horário já ocupado na agenda deste dia.')
     }
 }
+
+export class ProhibitedActionForThisRoleAccount extends CustomError{
+    constructor(){
+        super(403, 'Ação permitida apenas para contas de administradores.')
+    }
+}
+

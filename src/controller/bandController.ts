@@ -1,31 +1,51 @@
 import { Request, Response } from "express";
 import BandBusiness from "../business/BandBusiness";
 import { BandInputDTO } from "../model/class/DTO/bandDTOs";
+import { AuthenticationTokenDTO } from "../model/class/DTO/authenticatonsDTO";
+import * as dto from '../model/class/DTO/bandDTOs'
 
 export class BandController {
-  constructor(private bandBusiness: BandBusiness) {}
+  constructor(private bandBusiness: BandBusiness) { }
 
   public bandRegister = async (req: Request, res: Response) => {
     try {
-      const token: string = req.headers.authorization as string;
+
+      const token = req.headers.auth as string
+      const inputToken = new AuthenticationTokenDTO(token)
+
       const { name, music_genre, responsible } = req.body;
-      const input: BandInputDTO = {
+      const input = new BandInputDTO(
         name,
         music_genre,
         responsible,
-      };
+      )
 
-      await this.bandBusiness.bandRegister(input, token);
+      const result = await this.bandBusiness.bandRegister(input, inputToken);
 
-      res.status(201).send({ message: "Sua banda foi registrada com sucesso" });
+      res.status(201).send(result);
+
     } catch (error: any) {
-      if (res.statusCode === 200) {
-        res.status(500).send({ message: error.message });
-      } else {
-        res
-          .status(res.statusCode)
-          .send({ message: error.sqlMessage || error.message });
-      }
+      res.status(400).send(error.message)
+    }
+  };
+
+  public getBandDetails = async (req: Request, res: Response) => {
+    try {
+
+      const token = req.headers.auth as string
+      const inputToken = new AuthenticationTokenDTO(token)
+
+      const { bandIdOrName } = req.body;
+      const input = new dto.GetBandDetailsInputDTO(
+        bandIdOrName
+      )
+
+      const result = await this.bandBusiness.getBandDetails(input, inputToken)
+
+      res.status(201).send(result);
+
+    } catch (error: any) {
+      res.status(400).send(error.message)
     }
   };
 }

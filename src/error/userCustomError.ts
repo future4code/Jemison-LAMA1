@@ -41,3 +41,9 @@ export class InvalidUser extends CustomError {
         super(404, "Id do usuário não encontrado no banco de dados.")
     }
 }
+
+export class ProhibitedActionForThisRoleAccount extends CustomError{
+    constructor(){
+        super(403, 'Ação permitida apenas para contas de administradores.')
+    }
+}
