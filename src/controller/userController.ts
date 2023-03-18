@@ -24,20 +24,5 @@ export class UserController {
         } catch (error: any) {
             res.status(400).send(error.message)
         }
-    }
-
-    public getUserProfile = async (req: Request, res: Response): Promise<void> => {
-        try {
-            const token = req.headers.auth as string
-            const input = new AuthenticationTokenDTO(token)            
-
-            const id = req.params.userId
-            const userId = new dto.GetUserProfileInputDTO(id)
-
-            const result = await this.userBussiness.getUserProfile(userId, input)
-            res.status(201).send(result)
-
-        } catch (error: any) {
-            res.status(400).send(error.message)
-        }
- }}
+    };
+ }

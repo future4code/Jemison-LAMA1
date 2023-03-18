@@ -1,7 +1,7 @@
 import { ShowDatabase } from './../data/showDatabase';
 import { Authenticator } from './../services/authenticator';
 import express from "express";
-import BandBusiness from "../business/BandBusiness";
+import {BandBusiness} from "../business/BandBusiness";
 import { BandDatabase } from "../data/bandDatabase";
 import { IdGenerator } from "../services/IdGenerator";
 import { BandController } from "../controller/bandController"
@@ -15,6 +15,6 @@ const idGenerator = new IdGenerator()
 const bandBusiness = new BandBusiness(bandDatabase,showDatabase, authenticator,idGenerator)
 const bandController = new BandController(bandBusiness)
 
-bandRouter.get('/details',(req,res)=> bandController.getBandDetails)
+bandRouter.get('/details',(req,res)=> bandController.getBandDetails(req, res))
 
-bandRouter.post("/register", (req, res) => bandController.bandRegister);
+bandRouter.post("/register", (req, res) => bandController.bandRegister(req, res));
