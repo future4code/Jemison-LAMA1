@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs'
-import { IHashGenerator } from '../business/ports'
+import { IHashGenerator } from '../business/repository/ports'
 
 export class HashManager implements IHashGenerator{
 

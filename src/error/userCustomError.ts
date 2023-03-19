@@ -47,3 +47,15 @@ export class ProhibitedActionForThisRoleAccount extends CustomError{
         super(403, 'Ação permitida apenas para contas de administradores.')
     }
 }
+
+export class InvalidEmail extends CustomError {
+    constructor() {
+        super(422, 'Email no formato inválido, o email precisa ter o formato "nome@email.com".')
+    }
+}
+
+export class InvalidPassword extends CustomError {
+    constructor() {
+        super(422, 'Senha Inválida, a senha deve possuir no mínimo 8 caracteres contendo ao menos um números, uma letra maíuscula, uma letra minúsculas e um caracter especial(!@#$%&).')
+    }
+}

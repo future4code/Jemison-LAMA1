@@ -5,13 +5,14 @@ import * as dto from "../model/class/DTO/UserDTOs"
 import * as err from '../error/userCustomError'
 import { RoleEnum } from './../model/class/userClass';
 import { AuthenticationDataDTO, AuthenticationTokenDTO} from '../model/class/DTO/authenticatonsDTO';
-import { IAuthenticator, IHashGenerator, IIdGenerator } from './ports';
+import { IAuthenticator, IHashGenerator, IIdGenerator, IValidateUserData } from './repository/ports';
 
 
 export class UserBusiness {
 
     constructor(
         private userDatabase: UserRepository,
+        private validateUserData: IValidateUserData,
         private idGenerator: IIdGenerator,
         private hashManager: IHashGenerator,
         private authenticator: IAuthenticator
@@ -41,6 +42,16 @@ export class UserBusiness {
                 throw new err.InvalidRole()
             }
 
+            const isEmailValid = this.validateUserData.emailValidator(input.getEMail())
+            if(!isEmailValid){
+                throw new err.InvalidEmail()
+            }
+
+            const isPasswordValid = this.validateUserData.passwordValidator(input.getPassword())
+            if(!isPasswordValid){
+                throw new err.InvalidPassword()
+            }
+            
             const emailExists = await this.userDatabase.emailExists(input.getEMail())
 
             if(emailExists !== undefined) {

@@ -1,6 +1,6 @@
 import { TicketSalesClass } from './../model/class/ticketSalesClass';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
-import { IAuthenticator, IIdGenerator } from './ports';
+import { IAuthenticator, IIdGenerator } from './repository/ports';
 import { TicketRepository } from './repository/ticketRepository';
 import { TicketSalesRepository } from './repository/ticketSalesRepository';
 import { CustomError } from '../error/customError';

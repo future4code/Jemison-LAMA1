@@ -1,4 +1,4 @@
-import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './ports';
+import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './repository/ports';
 import { WeekDayEnum, ShowClass } from '../model/class/showClass';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
 import { ShowRepository } from './repository/showRepository';
@@ -29,7 +29,7 @@ export class ShowBusiness {
                 throw new err.ProhibitedActionForThisRoleAccount()
             }
 
-            let filtredWeekDay
+            let filteredWeekDay
 
 
             if (!input.getWeekday()) {
@@ -49,16 +49,16 @@ export class ShowBusiness {
             }
 
             if (input.getWeekday().toLowerCase() === WeekDayEnum.SEXTA.toString()) {
-                filtredWeekDay = WeekDayEnum.SEXTA
+                filteredWeekDay = WeekDayEnum.SEXTA
             } else if (input.getWeekday().toLowerCase() === WeekDayEnum.SABADO.toString() || input.getWeekday().toLowerCase() === 'sábado') {
-                filtredWeekDay = WeekDayEnum.SABADO
+                filteredWeekDay = WeekDayEnum.SABADO
             } else if (input.getWeekday().toLowerCase() === WeekDayEnum.DOMINGO.toString()) {
-                filtredWeekDay = WeekDayEnum.DOMINGO
+                filteredWeekDay = WeekDayEnum.DOMINGO
             } else {
                 throw new err.InvalidWeekDay()
             }
 
-            const isHoursValid = await this.showHourValidator.validate(filtredWeekDay, input.getStartTime(), input.getEndTime())
+            const isHoursValid = await this.showHourValidator.validate(filteredWeekDay, input.getStartTime(), input.getEndTime())
 
             if (isHoursValid) {
 
@@ -66,7 +66,7 @@ export class ShowBusiness {
 
                 const newShow = new ShowClass(
                     id,
-                    filtredWeekDay,
+                    filteredWeekDay,
                     input.getStartTime(),
                     input.getEndTime(),
                     bandExists.id
@@ -92,19 +92,19 @@ export class ShowBusiness {
                 throw new err.MissingWeekDay()
             }
 
-            let filtredWeekDay
+            let filteredWeekDay
 
             if (input.getWeekDay().toLowerCase() === WeekDayEnum.SEXTA.toString()) {
-                filtredWeekDay = WeekDayEnum.SEXTA
+                filteredWeekDay = WeekDayEnum.SEXTA
             } else if (input.getWeekDay().toLowerCase() === WeekDayEnum.SABADO.toString() || input.getWeekDay().toLowerCase() === 'sábado') {
-                filtredWeekDay = WeekDayEnum.SABADO
+                filteredWeekDay = WeekDayEnum.SABADO
             } else if (input.getWeekDay().toLowerCase() === WeekDayEnum.DOMINGO.toString()) {
-                filtredWeekDay = WeekDayEnum.DOMINGO
+                filteredWeekDay = WeekDayEnum.DOMINGO
             } else {
                 throw new err.InvalidWeekDay()
             }
 
-            const result = await this.showDatabase.getShowByWeekDay(filtredWeekDay)
+            const result = await this.showDatabase.getShowByWeekDay(filteredWeekDay)
             return result
 
         } catch (error: any) {
