@@ -31,6 +31,7 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
                 FROM ${this.TABLE_NAME} r
                 INNER JOIN ${TABLE_BANDS} b ON b.id = s.band_id_fk
                 WHERE s.week_day = "${weekDay}"
+                ORDER BY s.start_time;
             `)
             return result[0]
         } catch (error: any) {

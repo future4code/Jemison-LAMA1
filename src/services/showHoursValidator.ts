@@ -1,6 +1,6 @@
 import { WeekDayEnum } from '../model/class/showClass';
 import { ShowDatabase } from '../data/showDatabase';
-import { IShowHoursValidator } from '../business/ports';
+import { IShowHoursValidator } from '../business/repository/ports';
 import { CustomError } from '../error/customError';
 import * as err from '../error/showCustomError';
 

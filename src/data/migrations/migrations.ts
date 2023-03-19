@@ -1,10 +1,11 @@
-import { TABLE_USERS, TABLE_BANDS, TABLE_SHOWS, TABLE_TICKETS, TABLE_TICKET_SALES } from './../tableNames';
+import { TABLE_USERS, TABLE_BANDS, TABLE_SHOWS, TABLE_TICKETS, TABLE_TICKET_SALES, TABLE_EVENT_PHOTOS } from './../tableNames';
 import { BaseDatabase } from '../baseDatabase';
 import users from './users.json';
 import bands from './bands.json';
 import shows from './shows.json';
 import tickets from './tickets.json';
 import ticketsSales from './ticketsSales.json';
+import eventPhotos from './eventPhotos.json';
 
 export abstract class MigrationDataBase extends BaseDatabase {
 
@@ -14,7 +15,7 @@ export abstract class MigrationDataBase extends BaseDatabase {
             await MigrationDataBase.connection.raw(`
              SET FOREIGN_KEY_CHECKS= 0;
  
-                DROP TABLE IF EXISTS ${TABLE_USERS}, ${TABLE_BANDS}, ${TABLE_SHOWS}, ${TABLE_TICKETS}, ${TABLE_TICKET_SALES};
+                DROP TABLE IF EXISTS ${TABLE_USERS}, ${TABLE_BANDS}, ${TABLE_SHOWS}, ${TABLE_TICKETS}, ${TABLE_TICKET_SALES}, ${TABLE_EVENT_PHOTOS};
  
              SET FOREIGN_KEY_CHECKS= 1;
 
@@ -62,6 +63,13 @@ export abstract class MigrationDataBase extends BaseDatabase {
               FOREIGN KEY(ticket_id_fk) REFERENCES ${TABLE_TICKETS}(id)
               );
 
+              CREATE TABLE IF NOT EXISTS ${TABLE_EVENT_PHOTOS}(
+              id VARCHAR(255) PRIMARY KEY,
+              user_id_fk VARCHAR(255) NOT NULL,
+              photo_url VARCHAR(255) NOT NULL,
+              post_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+              FOREIGN KEY(user_id_fk) REFERENCES ${TABLE_USERS}(id)
+              );
             `)
                 .then(() => {
                     console.log(`Tables created successfully!`)
@@ -95,6 +103,11 @@ export abstract class MigrationDataBase extends BaseDatabase {
                 await MigrationDataBase.connection(`${TABLE_TICKET_SALES}`)
                     .insert(ticketsSales)
                     .then(() => console.log(`${TABLE_TICKET_SALES} populated!`))
+                    .catch((error: any) => printError(error))
+
+                await MigrationDataBase.connection(`${TABLE_EVENT_PHOTOS}`)
+                    .insert(eventPhotos)
+                    .then(() => console.log(`${TABLE_EVENT_PHOTOS} populated!`))
                     .catch((error: any) => printError(error))
 
             } catch (error: any) {

@@ -3,7 +3,7 @@ import { TicketRepository } from './repository/ticketRepository';
 import { AuthenticationTokenDTO } from '../model/class/DTO/authenticatonsDTO';
 import { CustomError } from '../error/customError';
 import { RoleEnum } from '../model/class/userClass';
-import { IAuthenticator, IIdGenerator } from './ports';
+import { IAuthenticator, IIdGenerator } from './repository/ports';
 import * as dto from '../model/class/DTO/ticketDTOs';
 import * as err from '../error/ticketCustomError'
 import { ShowRepository } from './repository/showRepository';

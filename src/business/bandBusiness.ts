@@ -2,7 +2,7 @@ import { BandClass } from "../model/class/bandClass";
 import { BandInputDTO } from "../model/class/DTO/bandDTOs";
 import { AuthenticationTokenDTO } from "../model/class/DTO/authenticatonsDTO";
 import { BandRepository } from "./repository/bandRepository";
-import { IAuthenticator, IIdGenerator } from "./ports";
+import { IAuthenticator, IIdGenerator } from "./repository/ports";
 import { RoleEnum } from "../model/class/userClass";
 import * as err from '../error/bandCustomError';
 import * as dto from '../model/class/DTO/bandDTOs'
