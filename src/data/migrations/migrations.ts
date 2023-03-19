@@ -4,7 +4,7 @@ import users from './users.json';
 import bands from './bands.json';
 import shows from './shows.json';
 import tickets from './tickets.json';
-import ticketsSold from './ticketsSold.json';
+import ticketsSales from './ticketsSales.json';
 
 export abstract class MigrationDataBase extends BaseDatabase {
 
@@ -93,7 +93,7 @@ export abstract class MigrationDataBase extends BaseDatabase {
                     .catch((error: any) => printError(error))
 
                 await MigrationDataBase.connection(`${TABLE_TICKET_SALES}`)
-                    .insert(ticketsSold)
+                    .insert(ticketsSales)
                     .then(() => console.log(`${TABLE_TICKET_SALES} populated!`))
                     .catch((error: any) => printError(error))
 

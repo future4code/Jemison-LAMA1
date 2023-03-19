@@ -36,6 +36,12 @@ export class ShowIdNonExists extends CustomError{
     }
 }
 
+export class IsNotNumber extends CustomError{
+    constructor(){
+        super(422, 'O valor do ingresso e o total de ingressos precisam ser números.')
+    }
+}
+
 export class ProhibitedActionForThisRoleAccount extends CustomError{
     constructor(){
         super(403, 'Ação permitida apenas para contas de administradores.')

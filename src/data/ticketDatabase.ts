@@ -21,7 +21,7 @@ export class TicketDatabase extends BaseDatabase implements TicketRepository {
         }
     };
 
-    public getTicketByName = async (ticketName: string): Promise<dto.ReturnGetTicketByNameDTO> => {
+    public getTicketByName = async (ticketName: string): Promise<dto.ReturnGetTicketByNameDTO | undefined> => {
 
         try {
 
@@ -33,4 +33,27 @@ export class TicketDatabase extends BaseDatabase implements TicketRepository {
         }
     };
 
+    public getTicketById = async (ticketId: string): Promise<dto.ReturnGetTicketByNameDTO | undefined> => {
+
+        try {
+
+            const result = await TicketDatabase.connection(this.TABLE_NAME).where('id', ticketId)
+            return result[0]
+
+        } catch (error: any) {
+            throw new CustomError(400, error.message);
+        }
+    };
+
+    public updateTicketsSoldQuantity = async (ticketId: string, newSoldQuantity: number): Promise<void> => {
+        try {
+
+            await TicketDatabase.connection(this.TABLE_NAME).where('id', ticketId).update('sold', newSoldQuantity)
+
+
+        } catch (error: any) {
+            throw new CustomError(400, error.message);
+        }
+    };
 }
+

@@ -1,8 +1,0 @@
-### REGISTER BAND 
-POST http://localhost:3003/band/create 
-Content-Type: application/json 
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImE0YjY2ZjMxLWFiMzAtNGI0ZC1hMjg3LTVkN2EyMTdlNDVlZiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY3ODgzNDQzOCwiZXhwIjoxNjgxNDI2NDM4fQ.kSJccYZ_iFWwGA-5DA50mQliGdKdHg5dT6Z9mkajwo4
-
-{
-"name": "SLIPKNOT", "music_genre": "ROCK", "responsible": "Corey Taylor"
-}

@@ -39,6 +39,10 @@ export class TicketBusiness {
                 throw new err.MissingTotalTickets()
             }
 
+            if (typeof (input.getPrice()) !== 'number' || typeof (input.getTotalTickets()) !== 'number') {
+                throw new err.IsNotNumber()
+            }
+
             const titleExists = await this.ticketDatabase.getTicketByName(input.getTitle())
             if (titleExists !== undefined) {
                 throw new err.TicketTitleAlreadyExists()

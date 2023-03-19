@@ -1,3 +1,4 @@
+import { ticketSalesRouter } from './routes/ticketSalesRouter';
 import { ticketRouter } from './routes/ticketRouter';
 import { showRouter } from './routes/showRouter';
 import { userRouter } from './routes/userRouter';
@@ -15,3 +16,5 @@ app.use("/band", bandRouter);
 app.use('/show', showRouter);
 
 app.use('/ticket', ticketRouter);
+
+app.use('/ticketsSales', ticketSalesRouter)
