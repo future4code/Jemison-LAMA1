@@ -2,7 +2,6 @@ import { EventPhotosClass } from './../model/class/EventPhotosClass';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
 import { EventPhotosRepository } from './repository/eventPhotosRepository';
 import { IAuthenticator, IIdGenerator } from './repository/ports';
-import { UserRepository } from './repository/userRepository';
 import { CustomError } from '../error/customError';
 import * as dto from '../model/class/DTO/eventPhotosDTOs';
 import * as err from '../error/eventPhotosCustomError'
