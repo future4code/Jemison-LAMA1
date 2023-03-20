@@ -39,7 +39,9 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
         }
     };
 
-    public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO[] | undefined> => {
+
+   public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO[] | undefined> => {
+
         try {
             const result = await ShowDatabase.connection.raw(`
                 SELECT s.band_id_fk AS "bandId", b.name AS "bandName", b.music_genre AS "bandGenre",

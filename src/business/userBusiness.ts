@@ -7,7 +7,6 @@ import { RoleEnum } from './../model/class/userClass';
 import { AuthenticationDataDTO, AuthenticationTokenDTO } from '../model/class/DTO/authenticatonsDTO';
 import { IAuthenticator, IHashGenerator, IIdGenerator, IValidateUserData } from './repository/ports';
 
-
 export class UserBusiness {
 
     constructor(
