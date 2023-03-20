@@ -1,4 +1,4 @@
-import { ShowClass, WeekDayEnum } from './../model/showClass';
+import { ShowClass, WeekDayEnum } from '../model/class/showClass';
 import { TABLE_SHOWS, TABLE_BANDS } from './tableNames';
 import { BaseDatabase } from "./baseDatabase";
 import { ShowRepository } from '../business/repository/showRepository';
@@ -21,16 +21,17 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
         }
     };
 
-    public getShowByWeekDay = async (weekDay: WeekDayEnum): Promise<dto.ReturnGetShowByWeekDTO[] | undefined> => {
+    public getShowByWeekDay = async (weekDay: WeekDayEnum): Promise<dto.ReturnGetShowByDTO[] | undefined> => {
 
         try {
 
             const result = await ShowDatabase.connection.raw(`
                 SELECT s.id AS "showId", s.week_day AS "weekDay", s.start_time AS "startTime", 
                 s.end_time AS "endTime", s.band_id_fk AS "bandId", b.name AS "bandName"
-                FROM ${this.TABLE_NAME} r
+                FROM ${this.TABLE_NAME} s
                 INNER JOIN ${TABLE_BANDS} b ON b.id = s.band_id_fk
                 WHERE s.week_day = "${weekDay}"
+                ORDER BY s.start_time;
             `)
             return result[0]
         } catch (error: any) {
@@ -38,7 +39,9 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
         }
     };
 
-    public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO | undefined> => {
+
+   public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO[] | undefined> => {
+
         try {
             const result = await ShowDatabase.connection.raw(`
                 SELECT s.band_id_fk AS "bandId", b.name AS "bandName", b.music_genre AS "bandGenre",
@@ -52,7 +55,25 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
         } catch (error: any) {
             throw new CustomError(400, error.message);
         }
-    }
+    };
+
+   
+    public getShowById = async (showId:string): Promise<dto.ReturnGetShowByDTO[] | undefined> => {
+
+        try {
+
+            const result = await ShowDatabase.connection.raw(`
+            SELECT s.id AS "showId", s.week_day AS "weekDay", s.start_time AS "startTime", 
+            s.end_time AS "endTime", s.band_id_fk AS "bandId", b.name AS "bandName"
+            FROM ${this.TABLE_NAME} s
+            INNER JOIN ${TABLE_BANDS} b ON b.id = s.band_id_fk
+            WHERE s.id = "${showId}"
+        `)
+            return result[0]
+        } catch (error: any) {
+            throw new CustomError(400, error.message);
+        }
+    }; 
 
 
 }

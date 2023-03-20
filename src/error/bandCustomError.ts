@@ -34,12 +34,6 @@ export class BandNameAlreadyExists extends CustomError {
     }
 }
 
-export class BandAlreadyHasAShow extends CustomError{
-    constructor(){
-       super(404, 'Esta banda já possui um show agendadado.')
-   }
-}
-
 export class InvalidIdOrName extends CustomError {
     constructor() {
         super(404, "ID ou o nome da banda não encontrados no banco de dados.")

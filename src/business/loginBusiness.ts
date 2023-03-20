@@ -21,7 +21,7 @@ export class LoginBusiness {
 
             const emailExists = await this.userDatabase.emailExists(input.getEmail())
 
-            if (!emailExists) {
+            if (emailExists === undefined) {
                 throw new err.WrongEmail()
             }
 

@@ -1,14 +1,14 @@
 [
     {
         "id": "a51461a9-2624-4ad7-bbec-62b8b8e4bff8",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 8,
         "end_time": 9,
         "band_id_fk": "139e3587-b10d-4ac5-a69f-8a201e4357e6"
     },
     {
         "id": "e4119251-4fd1-46f0-906a-ade6e3cdc55d",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 13,
         "end_time": 14,
         "band_id_fk": "de2447a5-623f-4135-9030-36ce9fbab96a"
@@ -36,7 +36,7 @@
     },
     {
         "id": "c6c33ac6-2c05-44ec-98b1-bc85e95eb2d9",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 19,
         "end_time": 20,
         "band_id_fk": "9dd9e71f-97ec-46ad-9bed-42a73f2c6ab7"
@@ -50,7 +50,7 @@
     },
     {
         "id": "5d60c8cf-15ce-45b8-86c3-164eb71013c9",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 22,
         "end_time": 23,
         "band_id_fk": "383f5400-3a1c-4e15-8ab5-1cb99851b041"
@@ -71,7 +71,7 @@
     },
     {
         "id": "86c5fba7-c3f4-456c-8142-54831d92725c",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 11,
         "end_time": 12,
         "band_id_fk": "2a2aaad7-d309-40f0-8c40-b306686e7201"
@@ -106,7 +106,7 @@
     },
     {
         "id": "f9e6b4a4-aca0-4fcc-9bea-bb79eb942000",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 15,
         "end_time": 16,
         "band_id_fk": "f8b7f5f3-a1b2-4960-9718-c332a608e272"
@@ -134,7 +134,7 @@
     },
     {
         "id": "571430f9-b7a6-4b61-913d-6299104226e0",
-        "week_day": "sábado",
+        "week_day": "sabado",
         "start_time": 14,
         "end_time": 15,
         "band_id_fk": "90dc8355-7019-4d53-ac45-c939b177c5c0"

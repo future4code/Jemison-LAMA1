@@ -26,52 +26,44 @@ export class BandBusiness {
             }
 
 
-            if (input.getName()) {
+            if (!input.getName()) {
                 throw new err.MissingBandName()
             }
-            if (input.getMusicGenre()) {
+            if (!input.getMusicGenre()) {
                 throw new err.MissingBandGenre
             }
-            if (input.getResponsible) {
+            if (!input.getResponsible()) {
                 throw new err.MissingBandResponsible
             }
 
             const bandNameExists = await this.bandDatabase.getBandByName(input.getName())
 
-            if (bandNameExists) {
+            if (bandNameExists !== undefined) {
                 throw new err.BandNameAlreadyExists()
             } else {
+                const id = this.idGeneratator.generateId();
 
-                const bandAlreadyHasAShow = await this.showDatabase.getBandShow(bandNameExists.id)
+                const newBand = new BandClass(
+                    id,
+                    input.getName(),
+                    input.getMusicGenre(),
+                    input.getResponsible()
+                );
 
-                if (bandAlreadyHasAShow) {
-                    throw new err.BandAlreadyHasAShow()
+                await this.bandDatabase.createBand(newBand);
 
-                } else {
+                const result = new dto.ReturnCreateBandDTO('Banda criada com sucesso.')
 
-                    const id = this.idGeneratator.generateId();
+                return result
 
-                    const newBand = new BandClass(
-                        id,
-                        input.getName(),
-                        input.getMusicGenre(),
-                        input.getResponsible()
-                    );
-
-                    await this.bandDatabase.createBand(newBand);
-
-                    const result = new dto.ReturnCreateBandDTO('Banda criada com sucesso.')
-
-                    return result
-
-                }
             }
+
         } catch (error: any) {
             throw new Error(error.message);
         }
     };
 
-    public getBandDetails = async (input: dto.GetBandDetailsInputDTO, token: AuthenticationTokenDTO):Promise<ReturnShowByBandDTO> => {
+    public getBandDetails = async (input: dto.GetBandDetailsInputDTO, token: AuthenticationTokenDTO): Promise<ReturnShowByBandDTO[] | dto.ReturnGetBandDTO> => {
         try {
 
             this.authenticator.getTokenData(token)
@@ -86,17 +78,22 @@ export class BandBusiness {
 
                 if (isInputId) {
                     result = await this.showDatabase.getBandShow(isInputId.id)
+                    if(result.length === 0){
+                        result = isInputId
+                    }
+
                 } else {
                     const isInputName = await this.bandDatabase.getBandByName(input.getBandIdOrName())
-                if(isInputName){
-                    result = await this.showDatabase.getBandShow(isInputName.id)
-                }else{
-                    throw new err.InvalidIdOrName()
+                    if (isInputName) {
+                        result = await this.showDatabase.getBandShow(isInputName.id)
+                        if(result.length === 0){
+                            result = isInputName
+                        }
+                    } else {
+                        throw new err.InvalidIdOrName()
+                    }
                 }
-                }
-
                 return result
-
             }
 
         } catch (error: any) {

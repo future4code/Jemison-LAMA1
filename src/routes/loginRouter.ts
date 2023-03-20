@@ -14,4 +14,4 @@ const authenticator = new Authenticator()
 const loginBusiness = new LoginBusiness(userDatabase, hashManager, authenticator)
 const loginController = new LoginController(loginBusiness)
 
-loginRouter.post('/login',(req, res) => loginController.login)
+loginRouter.post('/login',(req, res) => loginController.login(req, res))
