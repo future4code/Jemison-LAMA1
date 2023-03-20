@@ -9,7 +9,7 @@ import * as dto from '../model/class/DTO/bandDTOs'
 import { ShowRepository } from './repository/showRepository';
 import { ReturnShowByBandDTO } from '../model/class/DTO/showDTOs';
 
-export class BandsBusiness {
+export class BandBusiness{
     constructor(
         private bandDatabase: BandRepository,
         private showDatabase: ShowRepository,
