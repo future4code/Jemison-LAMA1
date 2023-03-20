@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import {BandBusiness} from "../business/BandBusiness";
+import {BandsBusiness} from "../business/BandBusiness";
 import { BandInputDTO } from "../model/class/DTO/bandDTOs";
 import { AuthenticationTokenDTO } from "../model/class/DTO/authenticatonsDTO";
 import * as dto from '../model/class/DTO/bandDTOs'
 
 export class BandController {
-  constructor(private bandBusiness: BandBusiness) { }
+  constructor(private bandBusiness: BandsBusiness) { }
 
   public bandRegister = async (req: Request, res: Response) => {
     try {

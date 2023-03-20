@@ -9,12 +9,12 @@ import * as dto from '../model/class/DTO/bandDTOs'
 import { ShowRepository } from './repository/showRepository';
 import { ReturnShowByBandDTO } from '../model/class/DTO/showDTOs';
 
-export class BandBusiness {
+export class BandsBusiness {
     constructor(
         private bandDatabase: BandRepository,
         private showDatabase: ShowRepository,
         private authenticator: IAuthenticator,
-        private idGeneratator: IIdGenerator
+        private idGenerator: IIdGenerator
     ) { }
 
     public bandRegister = async (input: BandInputDTO, token: AuthenticationTokenDTO): Promise<dto.ReturnCreateBandDTO> => {
@@ -41,7 +41,7 @@ export class BandBusiness {
             if (bandNameExists !== undefined) {
                 throw new err.BandNameAlreadyExists()
             } else {
-                const id = this.idGeneratator.generateId();
+                const id = this.idGenerator.generateId();
 
                 const newBand = new BandClass(
                     id,
