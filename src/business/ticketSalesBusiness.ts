@@ -34,8 +34,9 @@ export class TicketSalesBusiness {
 
             if (ticketExists === undefined) {
                 throw new err.InvalidTicketId()
+            } else if ((ticketExists.sold + input.getQuantity()) > ticketExists.total_tickets) {
+                throw new err.InvalidTicketsQuantity()
             } else {
-
                 const ticketSaleId = this.idGenerator.generateId()
 
                 const newTicketSale = new TicketSalesClass(

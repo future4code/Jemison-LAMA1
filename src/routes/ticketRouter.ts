@@ -18,5 +18,5 @@ const authenticator = new Authenticator()
 const ticketBusiness = new TicketBusiness(ticketDatabase, showDatabase, idGenerator, authenticator)
 const ticketController = new TicketController(ticketBusiness)
 
-showRouter.post('/create', (req, res) => ticketController.createTicket(req, res))
+ticketRouter.post('/create', (req, res) => ticketController.createTicket(req, res))
 

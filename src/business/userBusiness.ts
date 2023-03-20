@@ -4,7 +4,7 @@ import { CustomError } from "../error/customError"
 import * as dto from "../model/class/DTO/UserDTOs"
 import * as err from '../error/userCustomError'
 import { RoleEnum } from './../model/class/userClass';
-import { AuthenticationDataDTO, AuthenticationTokenDTO} from '../model/class/DTO/authenticatonsDTO';
+import { AuthenticationDataDTO, AuthenticationTokenDTO } from '../model/class/DTO/authenticatonsDTO';
 import { IAuthenticator, IHashGenerator, IIdGenerator, IValidateUserData } from './repository/ports';
 
 
@@ -16,10 +16,10 @@ export class UserBusiness {
         private idGenerator: IIdGenerator,
         private hashManager: IHashGenerator,
         private authenticator: IAuthenticator
-        ){}
+    ) { }
 
     public createUser = async (input: dto.UserControllerInputDTO): Promise<any> => {
-        try{
+        try {
 
             let filteredRole
 
@@ -43,18 +43,18 @@ export class UserBusiness {
             }
 
             const isEmailValid = this.validateUserData.emailValidator(input.getEMail())
-            if(!isEmailValid){
+            if (!isEmailValid) {
                 throw new err.InvalidEmail()
             }
 
             const isPasswordValid = this.validateUserData.passwordValidator(input.getPassword())
-            if(!isPasswordValid){
+            if (!isPasswordValid) {
                 throw new err.InvalidPassword()
             }
-            
-            const emailExists = await this.userDatabase.emailExists(input.getEMail())
 
-            if(emailExists !== undefined) {
+            const emailExists = await this.userDatabase.emailExists(input.getEMail())
+       
+            if (emailExists !== undefined) {
                 throw new err.EmailAlreadyExists()
             } else {
                 const id: string = this.idGenerator.generateId()
@@ -62,11 +62,12 @@ export class UserBusiness {
 
                 const newUser = new UserClass(
                     id,
-                    input.getEMail(),
                     input.getName(),
+                    input.getEMail(),
                     hashPassword,
                     filteredRole
                 )
+               
                 await this.userDatabase.insertUser(newUser)
 
                 const tokenInput = new AuthenticationDataDTO(
@@ -88,5 +89,5 @@ export class UserBusiness {
         }
     };
 
-    
+
 }

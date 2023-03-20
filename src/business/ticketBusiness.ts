@@ -48,8 +48,7 @@ export class TicketBusiness {
                 throw new err.TicketTitleAlreadyExists()
             } else {
                 const showExists = await this.showDatabase.getShowById(input.getShowId())
-
-                if (showExists === undefined) {
+              if (showExists.length === 0) {
                     throw new err.ShowIdNonExists()
                 } else {
 
