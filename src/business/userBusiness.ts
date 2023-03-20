@@ -4,8 +4,8 @@ import { CustomError } from "../error/customError"
 import * as dto from "../model/class/DTO/UserDTOs"
 import * as err from '../error/userCustomError'
 import { RoleEnum } from './../model/class/userClass';
-import { AuthenticationDataDTO, AuthenticationTokenDTO} from '../model/class/DTO/authenticatonsDTO';
-import { IAuthenticator, IHashGenerator, IIdGenerator } from './ports';
+import { AuthenticationDataDTO} from '../model/class/DTO/authenticatonsDTO';
+import { IAuthenticator, IHashGenerator, IIdGenerator } from './repository/ports';
 
 
 export class UserBusiness {

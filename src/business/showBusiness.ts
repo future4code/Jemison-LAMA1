@@ -1,4 +1,4 @@
-import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './ports';
+import { IAuthenticator, IIdGenerator, IShowHoursValidator } from './repository/ports';
 import { WeekDayEnum, ShowClass } from './../model/showClass';
 import { AuthenticationTokenDTO } from './../model/class/DTO/authenticatonsDTO';
 import { ShowRepository } from './repository/showRepository';

@@ -1,5 +1,5 @@
-import { AuthenticationDataDTO, AuthenticationTokenDTO, PayloadDataDTO } from "../model/class/DTO/authenticatonsDTO"
-import { WeekDayEnum } from "../model/showClass"
+import { AuthenticationDataDTO, AuthenticationTokenDTO, PayloadDataDTO } from "../../model/class/DTO/authenticatonsDTO"
+import { WeekDayEnum } from "../../model/showClass"
 
 export interface IHashGenerator {
     generateHash(plainText: string): Promise<string>

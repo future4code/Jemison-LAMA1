@@ -3,7 +3,7 @@ import { AuthenticationTokenDTO, AuthenticationDataDTO } from "../model/class/DT
 import { CustomError } from "../error/customError";
 import * as dto from '../model/class/DTO/loginDTOs'
 import * as err from '../error/loginCustomError'
-import { IAuthenticator, IHashGenerator } from "./ports";
+import { IAuthenticator, IHashGenerator } from "./repository/ports";
 
 
 export class LoginBusiness {
