@@ -41,11 +41,19 @@ export class ShowBusiness {
             if (!input.getEndTime()) {
                 throw new err.MissingEndTime()
             }
+            if (typeof (input.getStartTime()) !== 'number' || typeof (input.getEndTime()) !== 'number') {
+                throw new err.IsNotANumber()
+            }
 
             const bandExists = await this.bandDatabase.getBandById(input.getBandId())
 
             if (bandExists === undefined) {
                 throw new err.BandIdNonExists()
+            }
+
+            const bandAlreadyHasAShow = await this.showDatabase.getBandShow(input.getBandId())
+            if (bandAlreadyHasAShow.length > 0) {
+                throw new err.BandAlreadyHasAShow()
             }
 
             if (input.getWeekday().toLowerCase() === WeekDayEnum.SEXTA.toString()) {
@@ -113,5 +121,5 @@ export class ShowBusiness {
 
     };
 
-    
+
 }

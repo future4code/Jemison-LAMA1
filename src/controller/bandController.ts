@@ -13,10 +13,10 @@ export class BandController {
       const token = req.headers.auth as string
       const inputToken = new AuthenticationTokenDTO(token)
 
-      const { name, music_genre, responsible } = req.body;
+      const { name, musicGenre, responsible } = req.body;
       const input = new BandInputDTO(
         name,
-        music_genre,
+        musicGenre,
         responsible,
       )
 

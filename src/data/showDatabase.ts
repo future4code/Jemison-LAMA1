@@ -28,7 +28,7 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
             const result = await ShowDatabase.connection.raw(`
                 SELECT s.id AS "showId", s.week_day AS "weekDay", s.start_time AS "startTime", 
                 s.end_time AS "endTime", s.band_id_fk AS "bandId", b.name AS "bandName"
-                FROM ${this.TABLE_NAME} r
+                FROM ${this.TABLE_NAME} s
                 INNER JOIN ${TABLE_BANDS} b ON b.id = s.band_id_fk
                 WHERE s.week_day = "${weekDay}"
                 ORDER BY s.start_time;
@@ -39,7 +39,7 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
         }
     };
 
-    public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO | undefined> => {
+    public getBandShow = async (bandId: string): Promise<dto.ReturnShowByBandDTO[] | undefined> => {
         try {
             const result = await ShowDatabase.connection.raw(`
                 SELECT s.band_id_fk AS "bandId", b.name AS "bandName", b.music_genre AS "bandGenre",
@@ -56,14 +56,14 @@ export class ShowDatabase extends BaseDatabase implements ShowRepository {
     };
 
    
-    public getShowById = async (showId:string): Promise<dto.ReturnGetShowByDTO | undefined> => {
+    public getShowById = async (showId:string): Promise<dto.ReturnGetShowByDTO[] | undefined> => {
 
         try {
 
             const result = await ShowDatabase.connection.raw(`
             SELECT s.id AS "showId", s.week_day AS "weekDay", s.start_time AS "startTime", 
             s.end_time AS "endTime", s.band_id_fk AS "bandId", b.name AS "bandName"
-            FROM ${this.TABLE_NAME} r
+            FROM ${this.TABLE_NAME} s
             INNER JOIN ${TABLE_BANDS} b ON b.id = s.band_id_fk
             WHERE s.id = "${showId}"
         `)

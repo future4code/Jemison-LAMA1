@@ -19,7 +19,7 @@ export class EventPhotosDatabase extends BaseDatabase implements EventPhotosRepo
         }
     }; 
 
-    public getPhotoByUrl = async (photoUrl:string): Promise<dto.ReturnGetPhotoDTO | undefined> => {
+    public getPhotoByUrl = async (photoUrl:string): Promise<dto.ReturnGetPhotoDTO[] | undefined> => {
 
         try {
            const result = await EventPhotosDatabase.connection.raw(`

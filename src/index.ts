@@ -1,3 +1,4 @@
+import { eventPhotosRouter } from './routes/eventPhotosRouter';
 import { ticketSalesRouter } from './routes/ticketSalesRouter';
 import { ticketRouter } from './routes/ticketRouter';
 import { showRouter } from './routes/showRouter';
@@ -17,4 +18,6 @@ app.use('/show', showRouter);
 
 app.use('/ticket', ticketRouter);
 
-app.use('/ticketsSales', ticketSalesRouter)
+app.use('/ticketsSales', ticketSalesRouter);
+
+app.use('/eventPhotos', eventPhotosRouter)

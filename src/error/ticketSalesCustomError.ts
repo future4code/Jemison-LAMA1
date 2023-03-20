@@ -18,6 +18,12 @@ export class IsNotNumber extends CustomError{
     }
 }
 
+export class InvalidTicketsQuantity extends CustomError {
+    constructor() {
+        super(404, "A quantidade de ingressos da compra é maior que a quantidade de ingressos disponíveis banco de dados.")
+    }
+}
+
 export class InvalidTicketId extends CustomError {
     constructor() {
         super(404, "Id do ingresso não encontrado no banco de dados.")

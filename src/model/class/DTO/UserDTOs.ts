@@ -3,18 +3,20 @@ import { UserClass } from "../userClass";
 
 export class UserControllerInputDTO {
     constructor(
-        private email: string,
         private name: string,
+        private email: string,
         private password: string,
         private role: RoleEnum
-    ) {}
+    ) { }
 
-    public getEMail() {
-        return this.email
-    }
     public getName() {
         return this.name
     }
+    
+    public getEMail() {
+        return this.email
+    }
+
     public getPassword() {
         return this.password
     }
@@ -28,7 +30,7 @@ export class CreationUserReturnDTO {
         private message: string,
         private user: UserClass,
         private token: string
-    ) {}
+    ) { }
 
     public getMessage() {
         return this.message
@@ -42,9 +44,9 @@ export class CreationUserReturnDTO {
 }
 
 export class GetUserProfileInputDTO {
-    constructor (
+    constructor(
         private userId: string,
-    ) {}
+    ) { }
     public getUserId() {
         return this.userId
     }

@@ -30,7 +30,7 @@ export class EventPhotosBusiness {
 
             const photoUrlExists = await this.eventPhotosDatabase.getPhotoByUrl(input.getPhotoUrl())
 
-            if (photoUrlExists !== undefined) {
+            if (photoUrlExists.length > 0) {
                 throw new err.PhotoAlreadyExisits()
             } else {
 

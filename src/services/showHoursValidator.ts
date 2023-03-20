@@ -8,11 +8,14 @@ export class ShowHoursValidator implements IShowHoursValidator {
 
     public validate = async (weekDay: WeekDayEnum, startTime: number, endTime: number): Promise<boolean> => {
         try {
-            const isDateInteger = Number.isInteger(startTime / endTime)
-            if (!isDateInteger || startTime < 8 || startTime > 22 || endTime < 9 || endTime > 23) {
+            const isStartTimeInteger = Number.isInteger(startTime)
+            const isEndTimeInteger = Number.isInteger(endTime)
+
+
+            if (!isStartTimeInteger || !isEndTimeInteger || startTime < 8 || startTime > 22 || endTime < 9 || endTime > 23) {
                 throw new err.WrongShowHour()
             }
-            if (startTime < endTime || startTime === endTime) {
+            if (startTime > endTime || startTime === endTime) {
                 throw new err.WrongShowHour()
             }
 

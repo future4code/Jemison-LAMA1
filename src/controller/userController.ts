@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { UserBusiness } from "../business/userBusiness";
-import { AuthenticationTokenDTO } from "../model/class/DTO/authenticatonsDTO";
 import * as dto from "../model/class/DTO/UserDTOs"
 
 export class UserController {
@@ -9,11 +8,11 @@ export class UserController {
 
     public creatUsers = async (req: Request, res: Response): Promise<void> => {
         try{
-            const { email, name, password, role } = req.body
+            const { name, email, password, role } = req.body
 
             const input = new dto.UserControllerInputDTO(
-                email,
                 name,
+                email,
                 password,
                 role
             )
