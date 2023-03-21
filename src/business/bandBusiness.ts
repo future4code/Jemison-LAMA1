@@ -53,7 +53,7 @@ public bandRegister = async (input: dto.BandInputDTO, token: AuthenticationToken
 
             await this.bandDatabase.createBand(newBand);
 
-            const result = new dto.ReturnCreateBandDTO('Banda criada com sucesso.')
+            const result = new dto.ReturnCreateBandDTO('Banda cadastrada com sucesso.')
 
             return result
 
