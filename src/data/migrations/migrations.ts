@@ -31,7 +31,7 @@ export abstract class MigrationDataBase extends BaseDatabase {
                 id VARCHAR(255) PRIMARY KEY,
                 name VARCHAR(255) UNIQUE NOT NULL,
                 music_genre VARCHAR(255) NOT NULL,
-                responsible VARCHAR(255) UNIQUE NOT NULL 
+                responsible VARCHAR(255) NOT NULL 
               );
 
               CREATE TABLE IF NOT EXISTS ${TABLE_SHOWS}(
@@ -39,7 +39,7 @@ export abstract class MigrationDataBase extends BaseDatabase {
                 week_day ENUM("sexta","sábado","domingo") NOT NULL,
                 start_time INT NOT NULL,
                 end_time INT NOT NULL,
-                band_id_fk VARCHAR(255) NOT NULL,
+                band_id_fk VARCHAR(255) UNIQUE NOT NULL,
                 FOREIGN KEY(band_id_fk) REFERENCES ${TABLE_BANDS}(id)
               );
 
