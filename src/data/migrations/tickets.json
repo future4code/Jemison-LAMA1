@@ -1,0 +1,162 @@
+[
+    {
+        "id": "19f5ce48-dcdf-41bc-9639-3f978268d59e",
+        "title": "Show Marquinha de biquíni",
+        "show_id_fk": "571430f9-b7a6-4b61-913d-6299104226e0",
+        "price": 100.00,
+        "total_tickets": 800,
+        "sold":20
+    },
+    {
+        "id": "3a8ff710-1078-4070-856b-2889bcf93989",
+        "title": "Show Amores Revelados",
+        "show_id_fk": "e18c59ae-efe6-42c7-ad96-03aa4ea5c624",
+        "price": 140.00,
+        "total_tickets": 1500,
+        "sold":22
+    },
+    {
+        "id": "a8e14555-443c-4d1f-a0e9-600989366044",
+        "title": "Show Sorriso e Sincero",
+        "show_id_fk": "a0398b69-c99a-4c56-8c81-ccdbf3d0598e",
+        "price": 100.00,
+        "total_tickets": 2000,
+        "sold": 19
+    },
+    {
+        "id": "8bbb5a2a-1873-4c2c-b5d9-d74cab1f9837",
+        "title": "Show Praião e Piranha",
+        "show_id_fk": "c89a439d-a792-4d9f-a867-415dd77b31c1",
+        "price": 115.00,
+        "total_tickets": 1000,
+        "sold":15
+    },
+    {
+        "id": "dc95d70d-f8ed-49b7-a92c-2d3eed3ea83f",
+        "title": "Show Oceans of Slumber",
+        "show_id_fk": "53ca0650-3462-42c1-92c2-52ec6d8c4333",
+        "price": 120.00,
+        "total_tickets": 2000,
+        "sold":21
+    },
+    {
+        "id": "2f23d55d-92b9-4b14-95db-ef2612660642",
+        "title": "Show Amores do forró",
+        "show_id_fk": "e4119251-4fd1-46f0-906a-ade6e3cdc55d",
+        "price": 130.00,
+        "total_tickets": 2000,
+        "sold":16
+    },
+    {
+        "id": "40570d3b-26c2-4dff-a849-5a4471d18629",
+        "title": "Show Grito no escuro",
+        "show_id_fk": "5567a294-892c-4524-ab96-1406fce672a7",
+        "price": 120.00,
+        "total_tickets": 1200,
+        "sold":38
+    },
+    {
+        "id": "bc5165f6-f4f5-482d-8f1e-0cda00b3adc9",
+        "title": "Show Os levados",
+        "show_id_fk": "0577b08b-716a-4ac0-a9b4-bd01d766e00d",
+        "price": 150.00,
+        "total_tickets": 2000,
+        "sold":25
+    },
+    {
+        "id": "f95f0031-4aef-475f-bf21-72637b021444",
+        "title": "Show To Conquer",
+        "show_id_fk": "a51461a9-2624-4ad7-bbec-62b8b8e4bff8",
+        "price": 140.00,
+        "total_tickets": 1200,
+        "sold":30
+    },
+    {
+        "id": "daa12895-b257-4267-9015-f95eb59933cb",
+        "title": "Show Forrozando",
+        "show_id_fk": "f9e6b4a4-aca0-4fcc-9bea-bb79eb942000",
+        "price":150.00 ,
+        "total_tickets": 1300,
+        "sold":24
+    },
+    {
+        "id": "b91c4fd9-6b9a-4c5f-b9e0-82ded829cbd9",
+        "title": "Show Patrão e Funcionário",
+        "show_id_fk": "4b5ad8fa-feb7-45d8-a151-c921c6e55849",
+        "price": 170.00,
+        "total_tickets": 2000,
+        "sold":10
+    },
+    {
+        "id": "810d6e6f-4b67-4480-a172-1b0fb1dc0426",
+        "title": "Show Lima doce",
+        "show_id_fk": "5d60c8cf-15ce-45b8-86c3-164eb71013c9",
+        "price": 100.00,
+        "total_tickets": 1200,
+        "sold":35
+    },
+    {
+        "id": "ec5ce9d8-63fd-4cde-a7e8-0394503524f2",
+        "title": "Show Children of the Sun",
+        "show_id_fk": "0e4101d0-3b3b-4689-b852-e0598e5d9499",
+        "price": 112.00,
+        "total_tickets": 900,
+        "sold":31
+    },
+    {
+        "id": "3def209e-8344-4224-b601-1146ad81e276",
+        "title": "Show Affaire do Flerte",
+        "show_id_fk": "d1a940ef-01bf-441c-90ce-d5d35f8c8802",
+        "price": 150.00,
+        "total_tickets": 1400,
+        "sold":26
+    },
+    {
+        "id": "b6c9514b-8354-45e6-b8eb-8c0739471fba",
+        "title": "Show Strong girls",
+        "show_id_fk": "ccce71bb-54af-410d-a2a7-2cf6953d05d2",
+        "price": 180.00,
+        "total_tickets": 2000,
+        "sold":30
+    },
+    {
+        "id": "6c2aecf3-cfdc-40d5-9f6a-dbc4e69783bc",
+        "title": "Show Caveira grega",
+        "show_id_fk": "40f49931-e740-4ccc-b80c-ee90bd46b4e9",
+        "price": 120.00,
+        "total_tickets": 1000,
+        "sold":15
+    },
+    {
+        "id": "068fd918-9ba9-4e24-804b-63f5f8c0d1ed",
+        "title": "Show Festasamba",
+        "show_id_fk": "4e02c15a-3206-4c7c-a485-0d63979e7ae0",
+        "price": 100.00,
+        "total_tickets": 1500,
+        "sold":26
+    },
+    {
+        "id": "f23a49b7-ff9b-4290-8385-4fc6af91123b",
+        "title": "Show Wild Cats",
+        "show_id_fk": "c6c33ac6-2c05-44ec-98b1-bc85e95eb2d9",
+        "price": 115.00,
+        "total_tickets": 1000,
+        "sold":20
+    },
+    {
+        "id": "a0c4adb1-b559-42d6-8090-12850a05a926",
+        "title": "Show Stone Broken",
+        "show_id_fk": "86c5fba7-c3f4-456c-8142-54831d92725c",
+        "price": 130.00,
+        "total_tickets": 1600,
+        "sold":11
+    },
+    {
+        "id": "b29dd0a2-759f-44a6-a7f5-bbbfc97a833c",
+        "title": "Show Perito e Paquera",
+        "show_id_fk": "ea8ce4ed-f468-49e5-9a3b-fd8a3b92d38e",
+        "price": 200.00,
+        "total_tickets": 3000,
+        "sold":170
+    }
+]

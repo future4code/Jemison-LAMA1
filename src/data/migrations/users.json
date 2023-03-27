@@ -1,0 +1,142 @@
+[
+    {
+        "id": "ca5e5a9a-e0a0-44f4-88bf-f2d9d40d484d",
+        "name": "Felipe Cardoso",
+        "email": "re.alexandrini@gmail.com",
+        "password": "$2a$12$NuV3W6eo4gJv/c.Kt2aeEeJv6Qh9MVnpSv49vTx9SGgZjBI8Y5rnO",
+        "role":"normal"
+    },
+    {
+        "id": "610c68f8-71cf-421c-8695-9c33038b973d",
+        "name": "Flávia Siqueira",
+        "email": "flasiqueira@hotmail.com.br",
+        "password": "$2a$12$uTVK0LqPh1FLw07vj1oE7e9OsAHsLXelll34aTonbkTbV3JYhtvUC",
+        "role":"normal"
+    },
+    {
+        "id": "7de9386b-4ca5-4165-bf42-d1cdc72346ee",
+        "name": "Renan do Carmo",
+        "email": "carmorenan@gmail.com",
+        "password": "$2a$12$Ze.DI5Lzvw0mt3laAFSFWumQaWve9LyYm3/2zmMVsBGkjWIOhQFl2",
+        "role":"admin"
+    },
+    {
+        "id": "710097e3-351e-455a-b603-841c1db785a6",
+        "name": "Cíntia Coutinho",
+        "email": "cintiacou@outlook.com.br",
+        "password": "$2a$12$OpbzYuwcNM/Cv93B.SRWoO0xLVwqN199.zsLiwlP427otvAB.7V0S",
+        "role":"admin"
+    },
+    {
+        "id": "eb50fd48-04d6-48e7-82c5-01fa0a7ef5b2",
+        "name": "Flávio Pereira",
+        "email": "flapereira@gmail.com",
+        "password": "$2a$12$Ui81HZgYP8xSYBjzLV/f0uy57T4BJjn4HaEg8ju5mikoe6IBuzu/O",
+        "role":"normal"
+    },
+    {
+        "id": "84ffa88b-a81e-44f8-83b5-a4e7a242ea2d",
+        "name": "Simone Rodrigues",
+        "email": "simonerodrigues@yahoo.com.br",
+        "password": "$2a$12$VNRyjjADeEtaZu6zDdYtVuQSAU1Aj3AEvDsh/qo2YA4f8DviRiCNS",
+        "role":"normal"
+    },
+    {
+        "id": "427b449a-49c9-4ce0-9c4d-efe75d9db84c",
+        "name": "Geraldo Silva",
+        "email": "gesilva@yahoo.com.br",
+        "password": "$2a$12$JTBllnIkB3umtUSRASuVhePIXISp87I0ljAt/QSNz8sjjA0ccTp0i",
+        "role":"admin"
+    },
+    {
+        "id": "1bcde4a4-6f04-46be-bde7-e47b1ce7fd8c",
+        "name": "Bruna Souza",
+        "email": "brunosouza@gmail.com",
+        "password": "$2a$12$17EOoS5qiZnuggnWH9jiV.ff.89FFfIQErYns1kJK3yNex.Da24ni",
+        "role":"admin"
+    },
+    {
+        "id": "e1a95685-c0a6-4000-b81a-6a8506856594",
+        "name": "Daniel Pires",
+        "email": "danpires@outlook.com.br",
+        "password": "$2a$12$P.GhC6.isggyksa0uCDwWOYD0Unf5NRRMmMEukScJOcAo.QJzJmCK",
+        "role":"normal"
+    },
+    {
+        "id": "9d54f683-fed7-4876-84f6-498b3e2a29d8",
+        "name": "Patrícia Machado",
+        "email": "patymachado@hotmail.com.br",
+        "password": "$2a$12$EC1UM8ey9Uc/0s.sWiEsgekdk7Mdw6XH8WuWPhKH40fjoQgTSjLKu",
+        "role":"normal"
+    },
+    {
+        "id": "9a6818f2-0fbf-4d47-b92b-9be36b3cc630",
+        "name": "Jeferson dos Santos",
+        "email": "jefinhosantos@gmail.com",
+        "password": "$2a$12$6qBZsPbRWwQApiMPTSqeseca4k3N95Q76MOwVkL57EbfugJHLrpn2",
+        "role":"admin"
+    },
+    {
+        "id": "4c972a64-7c59-49e4-b8e7-5b643c863e2a",
+        "name": "Denise Aguiar",
+        "email": "deaguiar@outlook.com.br",
+        "password": "$2a$12$wNrUayLDIj27Xhf2ZjpXN.LU3G4e8OonwmIU5q4cYK0z2n8crmAQO",
+        "role":"admin"
+    },
+    {
+        "id": "0955d8a1-17eb-4825-bcfb-a527c5b812e3",
+        "name": "Rodolfo Nogueira",
+        "email": "rodolfonog@gmail.com",
+        "password": "$2a$12$kd9L3.EJlescS9kWX0ll7uJLctzFj.9bQNmD39v1/zNhZTXptFaxu",
+        "role":"normal"
+    },
+    {
+        "id": "0980f893-64bd-4081-800a-db067809cf35",
+        "name": "Gabriela Costa",
+        "email": "bielcosta@yahoo.com.br",
+        "password": "$2a$12$xWUDGWiA/Fd3oOmuvj1V3.mPgdKi/5HZ6jxUqK2857xb9r65PYjQ6",
+        "role":"normal"
+    },
+    {
+        "id": "018d100c-2e8b-48e1-8096-3ee450732214",
+        "name": "Rafael Fagundes",
+        "email": "rafagundes@yahoo.com.br",
+        "password": "$2a$12$HrcFPLBROv10RZGzoNskLul6y9fQAi6kc4C9PmW.o8izcDpPpc3xy",
+        "role":"admin"
+    },
+    {
+        "id": "cf66bc1e-4d1f-45a1-b451-d5420c7c2e97",
+        "name": "Maria Alves",
+        "email": "mariaalvs@outlook.com.br",
+        "password": "$2a$12$LMerxGkJjHYeJFJSYwt9J.IBAJNevChf7DqAA78QWPoV4g1O/oOTu",
+        "role":"admin"
+    },
+    {
+        "id": "083d7f33-fb85-4ec6-8f2e-d788e4581c24",
+        "name": "Jorge Barbosa",
+        "email": "jorginhobarb@yahoo.com.br",
+        "password": "$2a$12$2zFZ3Cgus1mCRzC0fyg7LuUvS7o/5PTuq1hmbxmkr8m6ZKVdI3.SW",
+        "role":"normal"
+    },
+    {
+        "id": "7f692872-2dfa-40a9-9436-13b30ce9aadb",
+        "name": "Rita Campos",
+        "email": "ritacampos@gmail.com",
+        "password": "$2a$12$yBC6EitlZi09yq0ptjT0WueyvZel/OBuB7bx9eq4oJk/zwFKtQYb.",
+        "role":"normal"
+    },
+    {
+        "id": "577e8beb-aa1e-43d1-9bc5-71df76d8ed23",
+        "name": "Júlio Soares ",
+        "email": "jusoares@gmail.com",
+        "password": "$2a$12$nCGej.DRNMOycC8xwqH/lugmIgrUJsX2I4nZrf/GkZSX5SqNTkS2K",
+        "role":"admin"
+    },
+    {
+        "id": "1734c014-397f-445c-863c-887c7178dd72",
+        "name": "Marina Monteiro",
+        "email": "mmonteiro@gmail.com",
+        "password": "$2a$12$IcDQcpQYyL6/1oX9bCA.XeIRiV5mx3c9r5D.R3Tmwj.zvDK07yIf.",
+        "role":"admin"
+    }
+]
